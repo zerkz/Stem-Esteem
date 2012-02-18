@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/endingEditStemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Stem: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/endingEditInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="textMultiLine"  
+            android:minLines="3"
+            android:maxLines="3"
+            />
+        	
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/dialogHorizontalLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp" >
+
+        <Button
+            android:id="@+id/okEndingEditButton"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="OK" 
+            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+         
+            />
+
+        <Button
+            android:id="@+id/deleteEndingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/cancelEndingEditButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cancel" 
+            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            />
+    </LinearLayout>
+
+  
+
+</LinearLayout>

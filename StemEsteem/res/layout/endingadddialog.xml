@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/endingAddStemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Stem: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/endingAddInputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:inputType="textMultiLine"  
+        android:minLines="3"
+        android:maxLines="3"
+        >
+
+        <requestFocus />
+    </EditText>
+
+
+    <LinearLayout
+        android:id="@+id/dialogHorizontalLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp" >
+
+        <Button
+            android:id="@+id/okEndingAddButton"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="OK" 
+            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+         
+            />
+        
+        <Button
+            android:id="@+id/cancelEndingAddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cancel" 
+            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

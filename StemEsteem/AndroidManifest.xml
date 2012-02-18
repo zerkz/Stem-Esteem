@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="whipkey.stemesteem"
+      android:versionCode="1"
+      android:versionName="OpenRelease1.0">
+    <uses-sdk android:minSdkVersion="8" />
+       
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name" android:name=".main.StemEsteemApplication">
+        <activity android:name=".main.StemEsteem"
+            >
+            
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        
+     
+            
+        </activity>
+        
+        <activity android:name=".main.EndingListActivity"></activity><provider android:authorities="@string/authority" android:name=".db.StemProvider"></provider>
+      
+        
+      
+
+    </application>
+</manifest>

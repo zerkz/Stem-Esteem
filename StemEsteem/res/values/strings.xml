@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, StemEsteem!</string>
+    <string name="app_name">Stem-Esteem</string>
+    <string name="week">Week 1</string>
+    <string name="authority">whipkey.stemesteem.db</string>
+</resources>
