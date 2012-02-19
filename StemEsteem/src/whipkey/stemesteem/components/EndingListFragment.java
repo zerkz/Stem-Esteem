@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +64,7 @@ public class EndingListFragment extends ListFragment {
 		Bundle b = new Bundle();
 		b.putInt("_id", c.getInt(c.getColumnIndex("_id")));
 		b.putString("ending", c.getString(c.getColumnIndex("ending")));
-		b.putString("stem", i.getExtras().getString("stem"));
+		b.putString("stem", this.b.getString("stem"));
 		dialogClickListener.dialogItemClick(b, 0); // An ending was clicked, ask
 													// for a EditEndingDialog.
 
@@ -80,34 +81,17 @@ public class EndingListFragment extends ListFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		if ((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) < Configuration.SCREENLAYOUT_SIZE_LARGE) { // If
-																																				// we
-																																				// are
-																																				// on
-																																				// a
-																																				// non-large
-																																				// screen
-																																				// device,
-																																				// fill
-																																				// our
-																																				// ending
-																																				// listview
-																																				// using
-																																				// the
-																																				// information
-																																				// the
-																																				// previous
-																																				// activity
-																																				// sent.
+		if ((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) < Configuration.SCREENLAYOUT_SIZE_LARGE) { // checks for large/xlarge screen.
 			fillData();
 		} // if we are on a large/xlarge screen device, skip the above and wait
 			// for StemEsteem to call for fillData().
 		addEndingButton = (Button) getView().findViewById(R.id.addEndingButton);
 		addEndingButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+				if(b != null){ // make sure a bundle existant.
 				dialogClickListener.dialogItemClick(b, 1); // our add ending
 															// button was
-															// clicked, ask for
+				}											// clicked, ask for
 															// a
 															// AddEndingDialog.
 			}
